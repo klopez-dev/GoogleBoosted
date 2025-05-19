@@ -1,1 +1,0 @@
-// Ce script est volontairement vide : plus de stockage de requête nécessaire. 
