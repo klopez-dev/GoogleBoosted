@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liens enregistrés</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 16px; min-width: 300px; }
+        #linkInput { width: 80%; padding: 6px; }
+        #addBtn { padding: 6px 12px; margin-left: 4px; }
+        ul { padding-left: 0; }
+        li { list-style: none; margin: 8px 0; display: flex; align-items: center; }
+        .link { flex: 1; text-decoration: underline; color: #1a73e8; cursor: pointer; }
+        .removeBtn { margin-left: 8px; color: #d00; cursor: pointer; background: none; border: none; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h3>Liens enregistrés</h3>
+    <input type="text" id="linkInput" placeholder="Collez un lien ici...">
+    <button id="addBtn">Ajouter</button>
+    <ul id="linksList"></ul>
+    <script src="popup.js"></script>
+</body>
+</html> 
