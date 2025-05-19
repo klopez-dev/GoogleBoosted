@@ -1,39 +1,44 @@
-function renderLinks(links) {
-    const list = document.getElementById('linksList');
-    list.innerHTML = '';
-    links.forEach((link, idx) => {
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.textContent = link;
-        a.href = link;
-        a.target = '_blank';
-        a.className = 'link';
-        li.appendChild(a);
-        const removeBtn = document.createElement('button');
-        removeBtn.textContent = '✕';
-        removeBtn.className = 'removeBtn';
-        removeBtn.onclick = () => {
-            links.splice(idx, 1);
-            chrome.storage.local.set({ savedLinks: links }, () => renderLinks(links));
-        };
-        li.appendChild(removeBtn);
-        list.appendChild(li);
-    });
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const linkCards = document.querySelectorAll('.link-card');
 
-document.getElementById('addBtn').onclick = () => {
-    const input = document.getElementById('linkInput');
-    let url = input.value.trim();
-    if (!url) return;
-    if (!/^https?:\/\//.test(url)) url = 'https://' + url;
-    chrome.storage.local.get({ savedLinks: [] }, (data) => {
-        const links = data.savedLinks;
-        if (!links.includes(url)) {
-            links.push(url);
-            chrome.storage.local.set({ savedLinks: links }, () => renderLinks(links));
-        }
-    });
-    input.value = '';
-};
+    // Fonction de recherche
+    function filterLinks(searchTerm) {
+        searchTerm = searchTerm.toLowerCase();
+        
+        linkCards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const description = card.querySelector('p').textContent.toLowerCase();
+            const site = card.getAttribute('data-site').toLowerCase();
+            
+            const isVisible = title.includes(searchTerm) || 
+                            description.includes(searchTerm) || 
+                            site.includes(searchTerm);
+            
+            card.style.display = isVisible ? 'block' : 'none';
+        });
+    }
 
-chrome.storage.local.get({ savedLinks: [] }, (data) => renderLinks(data.savedLinks)); 
+    // Événement de recherche en temps réel
+    searchInput.addEventListener('input', function(e) {
+        filterLinks(e.target.value);
+    });
+
+    // Animation de délai pour les cartes
+    linkCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.05}s`;
+    });
+
+    // Gestion du clic sur les cartes
+    linkCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Ne pas déclencher si on clique sur le lien
+            if (e.target.tagName !== 'A') {
+                const link = card.querySelector('a');
+                if (link) {
+                    window.open(link.href, '_blank');
+                }
+            }
+        });
+    });
+}); 
