@@ -1,8 +1,0 @@
-.chatgpt-button:hover {
-    background-color: #0d8c6d !important;
-    transition: background-color 0.3s ease;
-}
-
-.chatgpt-button:active {
-    transform: scale(0.98);
-} 
