@@ -4,7 +4,6 @@
   "version": "1.0",
   "description": "Ajoute des boutons à la barre de recherche Google",
   "permissions": [
-    "activeTab",
     "storage"
   ],
   "host_permissions": [
