@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Google Search Button Boost",
-  "version": "1.0",
+  "name": "Google Boosted",
+  "version": "1.0.0",
   "description": "Ajoute des boutons à la barre de recherche Google",
   "permissions": [
     "storage"

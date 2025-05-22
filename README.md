@@ -1,98 +1,102 @@
-# Extension Google Search Button Boost
+# Google Boosted 🚀
 
-![Version](https://img.shields.io/badge/version-1.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![Chrome](https://img.shields.io/badge/Chrome-✓-green.svg)
 ![Firefox](https://img.shields.io/badge/Firefox-✓-green.svg)
 ![Edge](https://img.shields.io/badge/Edge-✓-green.svg)
 
-## 📝 Description
+## 🌟 À propos
 
-Cette extension ajoute plusieurs boutons à la barre de recherche Google, permettant d'accéder rapidement à différents services avec votre recherche Google. Une solution élégante pour améliorer votre productivité lors de vos recherches.
+Google Boosted est une extension de navigateur élégante qui transforme votre expérience de recherche Google en ajoutant des boutons d'accès rapide à vos services préférés. Une solution simple mais puissante pour optimiser votre productivité quotidienne.
 
-## ✨ Fonctionnalités
+## ✨ Fonctionnalités principales
 
-- 🔍 Ajout de boutons rapides à la barre de recherche Google
-- 🎨 Design moderne et intégré
-- 📱 Compatible avec tous les navigateurs majeurs
-- 💫 Interface intuitive et responsive
-- 🔄 Accès instantané aux services populaires
+- 🎯 **Accès instantané** à vos services préférés directement depuis la barre de recherche
+- 🎨 **Interface moderne** et parfaitement intégrée à Google
+- 📱 **Multi-navigateurs** : Chrome, Firefox et Edge
+- ⚡ **Performance optimisée** pour une expérience fluide
+- 🔒 **Respect de la vie privée** : aucune collecte de données
 
-## 📋 Services disponibles
+## 🛠️ Services intégrés
 
-- **ChatGPT** : Copie la recherche dans le presse-papiers et ouvre ChatGPT
-- **Maps** : Ouvre Google Maps avec votre recherche
-- **Wikipedia** : Accès direct à la page Wikipédia correspondante
-- **Youtube** : Recherche instantanée sur YouTube
-- **Gmail** : Accès rapide à votre boîte mail
-- **Drive** : Ouverture directe de Google Drive
+| Service | Description | Icône |
+|---------|-------------|-------|
+| 🤖 **ChatGPT** | Copie votre recherche et ouvre ChatGPT | 🤖 |
+| 🗺️ **Maps** | Recherche instantanée sur Google Maps | 🗺️ |
+| 📚 **Wikipedia** | Accès direct aux articles Wikipédia | 📚 |
+| ▶️ **YouTube** | Recherche rapide sur YouTube | ▶️ |
+| ✉️ **Gmail** | Accès direct à votre boîte mail | ✉️ |
+| 💾 **Drive** | Ouverture de Google Drive | 💾 |
 
-## 🚀 Installation
+## 🚀 Installation rapide
 
 ### Chrome
-
-1. Téléchargez ou clonez ce dépôt
-2. Ouvrez Chrome et accédez à `chrome://extensions/`
-3. Activez le "Mode développeur" en haut à droite
-4. Cliquez sur "Charger l'extension non empaquetée"
-5. Sélectionnez le dossier contenant les fichiers de l'extension
+```bash
+1. Ouvrez chrome://extensions/
+2. Activez le "Mode développeur"
+3. Glissez-déposez le dossier de l'extension
+```
 
 ### Firefox
-
-1. Téléchargez ou clonez ce dépôt
-2. Ouvrez Firefox et accédez à `about:debugging#/runtime/this-firefox`
-3. Cliquez sur "Charger un module temporaire"
-4. Sélectionnez le fichier `manifest.json` dans le dossier de l'extension
+```bash
+1. Ouvrez about:debugging#/runtime/this-firefox
+2. Cliquez sur "Charger un module temporaire"
+3. Sélectionnez manifest.json
+```
 
 ### Edge
+```bash
+1. Ouvrez edge://extensions/
+2. Activez le "Mode développeur"
+3. Glissez-déposez le dossier de l'extension
+```
 
-1. Téléchargez ou clonez ce dépôt
-2. Ouvrez Edge et accédez à `edge://extensions/`
-3. Activez le "Mode développeur" en bas à gauche
-4. Cliquez sur "Charger une extension non empaquetée"
-5. Sélectionnez le dossier contenant les fichiers de l'extension
+## 💡 Comment utiliser
 
-## 🎯 Utilisation
+1. **Recherchez** sur Google.com
+2. **Choisissez** votre service préféré
+3. **Profitez** de l'accès instantané !
 
-1. Allez sur Google.com
-2. Tapez votre recherche dans la barre de recherche
-3. Cliquez sur le bouton souhaité (ChatGPT, Maps, Wikipedia, Youtube, Gmail, Drive)
-4. Pour ChatGPT, la recherche est copiée dans le presse-papiers, il suffit de faire Ctrl+V dans la zone de saisie
+> 💡 **Astuce** : Pour ChatGPT, votre recherche est automatiquement copiée dans le presse-papiers
 
-## 🛠️ Structure du projet
+## 🏗️ Architecture technique
 
 ```
 GoogleBoost/
 ├── manifest.json     # Configuration de l'extension
-├── content.js        # Code qui injecte les boutons
-├── styles.css        # Styles des boutons
-└── icons/           # Dossier contenant les icônes
-    ├── icon16.png   # Icône 16x16
-    ├── icon48.png   # Icône 48x48
-    └── icon128.png  # Icône 128x128
+├── content.js        # Injection des boutons
+├── styles.css        # Styles et animations
+├── popup.html        # Interface de configuration
+├── background.js     # Service worker
+└── icons/           # Assets graphiques
+    ├── icon48.png   
+    └── icon128.png  
 ```
 
-## ⚠️ Note importante
+## 🤝 Contribuer
 
-Pour ChatGPT, l'injection automatique n'est plus possible à cause des protections du site. La recherche est donc copiée dans le presse-papiers pour un collage manuel.
+Les contributions sont les bienvenues ! Voici comment participer :
 
-## 🤝 Contribution
-
-Les contributions sont les bienvenues ! N'hésitez pas à :
-
-1. Fork le projet
-2. Créer une branche pour votre fonctionnalité
-3. Commiter vos changements
-4. Pousser vers la branche
-5. Ouvrir une Pull Request
+1. 🍴 Fork le projet
+2. 🌿 Créez une branche (`git checkout -b feature/AmazingFeature`)
+3. 💾 Committez vos changements (`git commit -m 'Add AmazingFeature'`)
+4. 📤 Poussez vers la branche (`git push origin feature/AmazingFeature`)
+5. 🔄 Ouvrez une Pull Request
 
 ## 📝 Licence
 
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
-## 📞 Contact
+## 📞 Support & Contact
 
-Pour toute question ou suggestion, n'hésitez pas à ouvrir une issue sur GitHub.
+- 📧 [Ouvrir une issue](https://github.com/klopez-dev/GoogleBoost/issues)
+- 💻 [Visiter le GitHub](https://github.com/klopez-dev)
 
 ---
 
-Made with ❤️ pour améliorer votre expérience de recherche Google 
+<div align="center">
+  <p>Made with ❤️ pour une meilleure expérience Google</p>
+  <a href="https://www.paypal.com/ncp/payment/4BA5C3BTXLET4" target="_blank">
+    <img src="https://img.shields.io/badge/Support-Donner-yellow?style=for-the-badge" alt="Faire un don">
+  </a>
+</div> 
