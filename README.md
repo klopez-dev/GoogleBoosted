@@ -1,6 +1,6 @@
 # Google Boosted 🚀
 
-![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.2-blue.svg)
 ![Chrome](https://img.shields.io/badge/Chrome-✓-green.svg)
 ![Firefox](https://img.shields.io/badge/Firefox-✓-green.svg)
 ![Edge](https://img.shields.io/badge/Edge-✓-green.svg)
